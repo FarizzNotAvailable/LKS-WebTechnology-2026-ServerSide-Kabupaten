@@ -70,6 +70,7 @@ class JobController extends Controller
                 "description"=>$vacancy->description,
                 "available_position"=>$positions->map(function ( $position) {
                     return[
+                        'id'=>$position->id,
                         'position'=>$position->position,
                         'capacity'=>$position->capacity,
                         'apply_capacity'=>$position->total_capacity,
@@ -156,11 +157,12 @@ class JobController extends Controller
                     ],
                     "company"=>$application->vacancy->company,
                     "address"=>$application->vacancy->address,
+                    'notes' => $application->notes,
+                    'date' => $application->date,
                     "position"=>$position->map(function ( $posisi) use ($application) {
                         return[
                             'position' => $posisi->available_position->position,
                             'status' => $posisi->status,
-                            'notes' => $application->notes
                         ];
                     })->toArray()
                 ]
