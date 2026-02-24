@@ -1,0 +1,47 @@
+@import 'tailwindcss';
+
+*{
+      @apply border-gray-200
+}
+h1{
+      @apply font-light text-5xl 
+}
+h2{
+      @apply font-semibold text-2xl
+}
+h3{
+      @apply font-semibold text-xl
+}
+h4{
+      @apply font-semibold text-lg
+}
+a{
+      @apply font-semibold
+}
+p{
+      @apply text-gray-600
+}
+td{
+      @apply text-gray-600
+}
+label{
+      @apply text-gray-700
+}
+input{
+      @apply border-2 border-gray-200 rounded-md w-full p-2 mt-2 mb-4 focus:outline-none focus:border-blue-600 transition-all duration-200
+}
+select{
+      @apply w-2xs px-2 
+}
+textarea{
+      @apply border-2 rounded-sm w-full h-40 p-2
+}
+.btnPrima{
+      @apply bg-blue-600 w-full p-2 rounded-sm text-white active:bg-blue-800 
+}
+.btnMerah{
+      @apply bg-red-500 w-full p-1 text-white active:bg-red-600 
+}
+.btnHijau{
+      @apply bg-green-500 w-full p-1 text-white opacity-30
+}
